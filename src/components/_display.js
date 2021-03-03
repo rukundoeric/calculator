@@ -12,7 +12,11 @@ function Display({ result }) {
 }
 
 Display.propTypes = {
-  result: PropTypes.number.isRequired,
+  result: PropTypes.string,
+};
+
+Display.defaultProps = {
+  result: '0',
 };
 
 export default Display;

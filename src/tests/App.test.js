@@ -4,6 +4,5 @@ import App from '../components/App';
 
 test('App component', () => {
   render(<App />);
-  const text = screen.getByText(/Calculator App/i);
-  expect(text).toBeInTheDocument();
+  expect(screen).toMatchSnapshot();
 });
