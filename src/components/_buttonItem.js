@@ -2,9 +2,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ButtonItem({ item: { value } }) {
+function ButtonItem({ item: { value, style } }) {
   return (
-    <td><button type="button">{value}</button></td>
+    <td colSpan={value === '0' ? 2 : ''}>
+      <button className={style} type="button">{value}</button>
+    </td>
   );
 }
 

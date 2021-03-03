@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 function Display({ result }) {
   return (
-    <tr>
-      <td colSpan="4"><div>{result}</div></td>
-    </tr>
+    <thead height="100px">
+      <tr>
+        <td colSpan="4"><div className="res">{result}</div></td>
+      </tr>
+    </thead>
   );
 }
 

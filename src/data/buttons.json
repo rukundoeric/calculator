@@ -2,87 +2,87 @@
   [
     {
       "value": "AC",
-      "style": ""
+      "style": "contrl"
     },
     {
       "value": "+/-",
-      "style": ""
+      "style": "contrl"
     },
     {
       "value": "%",
-      "style": ""
+      "style": "contrl"
     },
     {
       "value": "÷",
-      "style": ""
+      "style": "ops"
     }
   ],
   [
     {
       "value": "7",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "8",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "9",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "X",
-      "style": ""
+      "style": "ops"
     }
   ],
   [
     {
       "value": "4",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "5",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "6",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "-",
-      "style": ""
+      "style": "ops"
     }
   ],
   [
     {
       "value": "1",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "2",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "3",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "+",
-      "style": ""
+      "style": "ops"
     }
   ],
   [
     {
       "value": "0",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": ".",
-      "style": ""
+      "style": "nums"
     },
     {
       "value": "=",
-      "style": ""
+      "style": "ops"
     }
   ]
 ]

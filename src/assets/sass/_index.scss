@@ -1,12 +1,25 @@
+$font1: -apple-system,
+  blinkmacsystemfont,
+  'Segoe UI',
+  'Roboto',
+  'Oxygen',
+  'Ubuntu',
+  'Cantarell',
+  'Fira Sans',
+  'Droid Sans',
+  'Helvetica Neue',
+  sans-serif;
+
 .App {
   text-align: center;
 }
 
 .calc-content {
-  border: 1px solid red;
+  background-color: rgb(39, 58, 77);
   height: 70vmin;
   width: 50vmin;
-  pointer-events: none;
+  padding: 25px 10px;
+  border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -41,31 +54,49 @@
 }
 
 table {
+  margin-top: 30px;
   width: 100%;
-  height: 100%;
+
+  thead {
+    td {
+      height: 10vmin;
+      background-color: #282c344f;
+
+      .res {
+        float: right;
+        padding-right: 20px;
+        font-family: $font1;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+
+  tbody {
+    td {
+      width: 25%;
+      height: 70px;
+    }
+  }
 
   button {
     width: 100%;
     height: 100%;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: white;
+    font-family: $font1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -76,4 +107,31 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+.nums {
+  color: white;
+  background-color: rgb(46, 109, 88);
+
+  &:hover {
+    background-color: rgba(46, 109, 88, 0.678);
+  }
+}
+
+.contrl {
+  color: white;
+  background-color: rgb(207, 100, 0);
+
+  &:hover {
+    background-color: rgba(207, 100, 0, 0.678);
+  }
+}
+
+.ops {
+  color: white;
+  background-color: rgb(31, 94, 230);
+
+  &:hover {
+    background-color: rgba(31, 94, 230, 0.678);
+  }
 }
