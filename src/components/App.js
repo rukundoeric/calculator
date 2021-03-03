@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import Display from './_display';
 import '../assets/css/style.css';
 
 class App extends Component {
@@ -16,11 +17,30 @@ class App extends Component {
         <div className="calc-container">
           <div className="calc-content">
             <table border="1">
+              <Display result={result} />
               <tr>
-                <td><div>{result}</div></td>
+                <td><button type="button">9</button></td>
+                <td><button type="button">8</button></td>
+                <td><button type="button">7</button></td>
+                <td><button type="button">/</button></td>
               </tr>
               <tr>
-                <td></td>
+                <td><button type="button">9</button></td>
+                <td><button type="button">8</button></td>
+                <td><button type="button">7</button></td>
+                <td><button type="button">/</button></td>
+              </tr>
+              <tr>
+                <td><button type="button">9</button></td>
+                <td><button type="button">8</button></td>
+                <td><button type="button">7</button></td>
+                <td><button type="button">/</button></td>
+              </tr>
+              <tr>
+                <td><button type="button">9</button></td>
+                <td><button type="button">8</button></td>
+                <td><button type="button">7</button></td>
+                <td><button type="button">/</button></td>
               </tr>
             </table>
           </div>
