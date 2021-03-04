@@ -1,15 +1,19 @@
-import logo from '../assets/images/logo.svg';
+import React from 'react';
+import Display from './_display';
+import ButtonPanel from './_buttonPanel';
 import '../assets/css/style.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          calculator app
-        </p>
-      </header>
+      <div className="calc-container">
+        <div className="calc-content">
+          <table>
+            <Display />
+            <ButtonPanel />
+          </table>
+        </div>
+      </div>
     </div>
   );
 }

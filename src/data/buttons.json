@@ -1,0 +1,88 @@
+[
+  [
+    {
+      "value": "AC",
+      "style": "contrl"
+    },
+    {
+      "value": "+/-",
+      "style": "contrl"
+    },
+    {
+      "value": "%",
+      "style": "contrl"
+    },
+    {
+      "value": "÷",
+      "style": "ops"
+    }
+  ],
+  [
+    {
+      "value": "7",
+      "style": "nums"
+    },
+    {
+      "value": "8",
+      "style": "nums"
+    },
+    {
+      "value": "9",
+      "style": "nums"
+    },
+    {
+      "value": "X",
+      "style": "ops"
+    }
+  ],
+  [
+    {
+      "value": "4",
+      "style": "nums"
+    },
+    {
+      "value": "5",
+      "style": "nums"
+    },
+    {
+      "value": "6",
+      "style": "nums"
+    },
+    {
+      "value": "-",
+      "style": "ops"
+    }
+  ],
+  [
+    {
+      "value": "1",
+      "style": "nums"
+    },
+    {
+      "value": "2",
+      "style": "nums"
+    },
+    {
+      "value": "3",
+      "style": "nums"
+    },
+    {
+      "value": "+",
+      "style": "ops"
+    }
+  ],
+  [
+    {
+      "value": "0",
+      "style": "nums"
+    },
+    {
+      "value": ".",
+      "style": "nums"
+    },
+    {
+      "value": "=",
+      "style": "ops"
+    }
+  ]
+]
