@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ButtonItem({ item: { value, style }, handleClick }) {
-  const buttonClick = () => handleClick(value);
+  const buttonClick = () => handleClick(value.toLowerCase());
 
   return (
     <td colSpan={value === '0' ? 2 : ''}>
