@@ -2,16 +2,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ButtonItem({ item: { value, style } }) {
+function ButtonItem({ item: { value, style }, handleClick }) {
+  const buttonClick = () => handleClick(value);
+
   return (
     <td colSpan={value === '0' ? 2 : ''}>
-      <button className={style} type="button">{value}</button>
+      <button
+        onClick={buttonClick}
+        datavalue={value}
+        className={style}
+        type="button"
+      >
+        {value}
+      </button>
     </td>
   );
 }
 
 ButtonItem.propTypes = {
   item: PropTypes.object.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default ButtonItem;
