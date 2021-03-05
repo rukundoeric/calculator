@@ -12,7 +12,7 @@ class App extends Component {
       total: 0,
       next: '0',
       operation: null,
-      calculationPath: null,
+      calculationPath: undefined,
       result: null,
     };
     this.handleClick = this.handleClick.bind(this);

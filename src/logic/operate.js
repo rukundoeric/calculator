@@ -6,15 +6,15 @@ const operate = (number1, number2, operation) => {
 
   switch (operation.toLowerCase()) {
     case '+':
-      return `${num1.plus(num2)}`;
+      return parseFloat(`${num1.plus(num2)}`);
     case '-':
-      return `${num1.minus(num2)}`;
+      return parseFloat(`${num1.minus(num2)}`);
     case 'x':
-      return `${num1.times(num2)}`;
+      return parseFloat(`${num1.times(num2)}`);
     case '÷':
-      return `${num1 === 0 ? 'UNDERFINED' : num1.div(num2)}`;
+      return `${num2}` === '0' ? 'UNDEFINED' : parseFloat(`${num1.div(num2)}`);
     case '%':
-      return `${num1.mod(num2)}`;
+      return parseFloat(`${num1.mod(num2)}`);
 
     default:
       return null;

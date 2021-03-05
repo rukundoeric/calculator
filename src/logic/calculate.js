@@ -6,6 +6,7 @@ const calculate = ({
   next,
   operation,
   calculationPath,
+  result: rlt,
 }, buttonName) => {
   const result = {};
 
@@ -23,15 +24,38 @@ const calculate = ({
     case '.':
       result.next = next === '0' ? buttonName : next + buttonName;
       result.calculationPath = !calculationPath ? buttonName : calculationPath + buttonName;
+      result.result = null;
       break;
-    case 'AC':
+    case '+/-':
+      if (rlt) {
+        const res = rlt * -1;
+        result.result = res;
+        result.next = res;
+        result.calculationPath = res;
+        result.operation = null;
+      } else if (next) {
+        const res = parseFloat(next) * -1;
+        result.result = res;
+        result.next = res;
+        result.calculationPath = res;
+        result.operation = null;
+      } else {
+        result.result = '0';
+        result.next = '0';
+        result.calculationPath = '0';
+        result.operation = null;
+      }
+      break;
+    case 'ac':
+      result.total = 0;
       result.next = '0';
-      result.total = null;
       result.operation = null;
+      result.calculationPath = undefined;
+      result.result = null;
       break;
     case '=':
-      if (total > 0) {
-        const res = parseFloat(operate(total, parseFloat(next), operation));
+      if (operation) {
+        const res = operate(total, parseFloat(next), operation);
         result.result = res;
         result.next = res;
         result.calculationPath = res;
@@ -51,14 +75,14 @@ const calculate = ({
       break;
     default:
       if (operation) {
-        result.total = parseFloat(operate(total, parseFloat(next), operation));
+        result.total = operate(total, parseFloat(next), operation);
       } else {
         result.total = parseFloat(next);
       }
       result.result = null;
       result.next = '0';
       result.operation = buttonName;
-      result.calculationPath = calculationPath + buttonName;
+      result.calculationPath = (!calculationPath ? '0' : calculationPath) + buttonName;
   }
   return result;
 };
