@@ -12,7 +12,7 @@ const operate = (number1, number2, operation) => {
     case 'x':
       return parseFloat(`${num1.times(num2)}`);
     case '÷':
-      return `${num2}` === '0' ? 'UNDEFINED' : parseFloat(`${num1.div(num2)}`);
+      return `${num2}` === '0' ? 'INFINITY' : parseFloat(`${num1.div(num2)}`);
     case '%':
       return parseFloat(`${num1.mod(num2)}`);
 

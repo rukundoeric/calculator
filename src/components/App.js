@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import { Component } from 'react';
 import Display from './_display';
 import ButtonPanel from './_buttonPanel';
