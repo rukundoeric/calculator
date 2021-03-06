@@ -9,7 +9,7 @@ const calculate = ({
 }, buttonName) => {
   const result = {};
 
-  switch (buttonName) {
+  switch (buttonName.toLowerCase()) {
     case '0':
     case '1':
     case '2':
@@ -34,6 +34,26 @@ const calculate = ({
         result.operation = null;
       } else if (next) {
         const res = parseFloat(next) * -1;
+        result.result = res;
+        result.next = res;
+        result.calculationPath = res;
+        result.operation = null;
+      } else {
+        result.result = '0';
+        result.next = '0';
+        result.calculationPath = '0';
+        result.operation = null;
+      }
+      break;
+    case '%':
+      if (rlt) {
+        const res = rlt / 100;
+        result.result = res;
+        result.next = res;
+        result.calculationPath = res;
+        result.operation = null;
+      } else if (next) {
+        const res = parseFloat(next) / 100;
         result.result = res;
         result.next = res;
         result.calculationPath = res;

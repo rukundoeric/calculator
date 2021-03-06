@@ -1,3 +1,4 @@
+/* eslint-disable react/no-access-state-in-setstate */
 import { Component } from 'react';
 import Display from './_display';
 import ButtonPanel from './_buttonPanel';
@@ -14,13 +15,9 @@ class App extends Component {
       calculationPath: undefined,
       result: null,
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(buttonName) {
-    const newState = calculate(this.state, buttonName);
-    this.setState(newState);
-  }
+  handleClick = buttonName => this.setState(calculate(this.state, buttonName));
 
   render() {
     const { result, calculationPath } = this.state;
