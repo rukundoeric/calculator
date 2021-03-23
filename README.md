@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/rukundoeric/calculator.svg?branch=tests)](https://travis-ci.com/rukundoeric/calculator)
+
 # Calculator
 This i a calculator app that will help users to perform or execute complex calculations.
 

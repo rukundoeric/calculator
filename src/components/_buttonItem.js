@@ -8,6 +8,7 @@ function ButtonItem({ item: { value, style }, handleClick }) {
   return (
     <td colSpan={value === '0' ? 2 : ''}>
       <button
+        data-testid={`button_${value}`}
         onClick={buttonClick}
         datavalue={value}
         className={style}

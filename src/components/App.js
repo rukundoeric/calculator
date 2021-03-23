@@ -27,7 +27,7 @@ class App extends Component {
         <div className="calc-container">
           <div className="calc-content">
             <table>
-              <Display result={!result ? calculationPath : result} />
+              <Display result={!result ? calculationPath : `${result}`} />
               <ButtonPanel handleClick={this.handleClick} />
             </table>
           </div>
