@@ -49,6 +49,21 @@ it('should return new state when buttonName is =', () => {
   const state1 = calculate({ ...initialState }, '=');
   const state2 = calculate({ ...initialState, calculationPath: '20', next: '20' }, '=');
   expect(typeof state1).toBe('object');
+  expect(typeof state2).toBe('object');
   expect(state1.result).toBe(0);
   expect(state2.result).toBe(20);
+});
+
+it('should return new state when buttonName is -, +, * or /', () => {
+  const state1 = calculate({ ...initialState }, '-');
+  const state2 = calculate({ ...initialState, calculationPath: '20' }, '-');
+  const state3 = calculate({ ...initialState, calculationPath: '550' }, '+');
+  expect(typeof state1).toBe('object');
+  expect(typeof state2).toBe('object');
+  expect(typeof state3).toBe('object');
+  expect(state1.operation).toBe('-');
+  expect(state2.operation).toBe('-');
+  expect(state2.calculationPath).toBe('20-');
+  expect(state3.operation).toBe('+');
+  expect(state3.calculationPath).toBe('550+');
 });
