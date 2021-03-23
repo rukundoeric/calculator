@@ -4,5 +4,6 @@ import App from '../../components/App';
 
 test('App component', () => {
   render(<App />);
+  // expect(getByTestId(document.documentElement, 'svg-element')).toBeInTheDocument();
   expect(screen).toMatchSnapshot();
 });
