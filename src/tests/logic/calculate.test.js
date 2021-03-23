@@ -26,3 +26,12 @@ it('should return new state when buttonName is +/-', () => {
   expect(state1.next).toBe(10);
   expect(state2.next).toBe(-20);
 });
+
+it('should return new state when buttonName is %', () => {
+  const state1 = calculate({ ...initialState }, '%');
+  const state2 = calculate({ ...initialState, calculationPath: '20', next: '20' }, '%');
+  expect(typeof state1).toBe('object');
+  expect(state1.next).toBe(0);
+  expect(state2.next).toBe(0.2);
+});
+
