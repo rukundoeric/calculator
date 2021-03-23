@@ -18,3 +18,11 @@ it('should return new state when buttonName is 1,2,3,4,5,6,7,8,9 or .', () => {
   expect(state2.next).toBe('9');
 });
 
+it('should return new state when buttonName is +/-', () => {
+  const state1 = calculate({ ...initialState, next: '-10' }, '+/-');
+  const state2 = calculate({ ...initialState, next: '20' }, '+/-');
+  expect(typeof state1).toBe('object');
+  expect(state1.operation).toBe(null);
+  expect(state1.next).toBe(10);
+  expect(state2.next).toBe(-20);
+});
